@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lasbedrijf BvD | Lassen & Staalconstructie – Enkhuizen</title>
+  <meta name="description" content="Lasbedrijf BvD in Enkhuizen. Specialist in MIG/MAG & TIG lassen, staalconstructie op maat, metaalbewerking, reparaties en mobiele lasdienst. Voor bedrijven en particulieren." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #F97316;
+      --orange-dark: #C2590A;
+      --orange-glow: rgba(249,115,22,0.18);
+      --bg: #111111;
+      --bg2: #1a1a1a;
+      --bg3: #222222;
+      --bg4: #2a2a2a;
+      --border: rgba(255,255,255,0.08);
+      --text: #F1F1F1;
+      --text-muted: #999;
+      --white: #ffffff;
+      --nav-h: 72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+    /* ── TYPOGRAPHY ── */
+    h1, h2, h3, h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── UTILS ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .orange { color: var(--orange); }
+    .tag {
+      display: inline-block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 13px 32px;
+      border: 1px solid rgba(255,255,255,0.25);
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--orange);
+      margin-bottom: 24px;
+    }
+
+    /* ── NOISE TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-h);
+      z-index: 100;
+      background: rgba(17,17,17,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    }
+    .logo-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1;
+    }
+    .logo-text span { display: block; font-size: 11px; font-weight: 400; letter-spacing: 0.15em; color: var(--text-muted); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--orange); }
+    .nav-cta {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--orange);
+      color: #fff;
+      padding: 10px 22px;
+      text-decoration: none;
+      transition: background 0.2s;
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    }
+    .nav-cta:hover { background: var(--orange-dark); }
+
+    /* hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      z-index: 99;
+      padding: 24px;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--orange); }
+
+    /* ── HERO ── */
+    #home {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: var(--nav-h);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(249,115,22,0.08) 0%, transparent 70%),
+        linear-gradient(180deg, #111111 0%, #1a1a1a 100%);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow-line {
+      width: 40px;
+      height: 2px;
+      background: var(--orange);
+    }
+    .hero-eyebrow-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+    .hero-title {
+      font-size: clamp(56px, 8vw, 100px);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 0.95;
+      margin-bottom: 24px;
+    }
+    .hero-title .line2 { color: var(--orange); -webkit-text-stroke: 0; }
+    .hero-desc {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .stat-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      padding: 24px;
+    }
+    .stat-card:first-child { border-top-left-radius: 2px; }
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-badge-ring {
+      position: relative;
+      width: 320px;
+      height: 320px;
+    }
+    .hero-badge-ring svg {
+      position: absolute;
+      inset: 0;
+      animation: spin 24s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .hero-badge-center {
+      position: absolute;
+      inset: 32px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    }
+    .spark-icon {
+      margin-bottom: 12px;
+    }
+    .hero-badge-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--white);
+      text-align: center;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    .hero-badge-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .sparks {
+      position: absolute;
+      inset: -20px;
+      pointer-events: none;
+    }
+    .spark {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--orange);
+      border-radius: 50%;
+      animation: spark-anim 2s ease-in-out infinite;
+    }
+    @keyframes spark-anim {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      overflow: hidden;
+    }
+    .trust-inner {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      white-space: nowrap;
+      animation: marquee 30s linear infinite;
+    }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .trust-dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; flex-shrink: 0; }
+
+    /* ── SECTIONS ── */
+    section { position: relative; z-index: 1; }
+    .section-pad { padding: 100px 0; }
+
+    /* ── DIENSTEN ── */
+    #diensten { background: var(--bg); }
+    .diensten-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 56px;
+      flex-wrap: wrap;
+    }
+    .diensten-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .dienst-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 36px 32px;
+      cursor: default;
+      transition: background 0.25s, border-color 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .dienst-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--orange);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .dienst-card:hover { background: var(--bg3); border-color: var(--orange-glow); }
+    .dienst-card:hover::before { transform: scaleX(1); }
+    .dienst-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--orange-glow);
+      border: 1px solid rgba(249,115,22,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    }
+    .dienst-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .dienst-title {
+      font-size: 26px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .dienst-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── OVER ONS ── */
+    #overons { background: var(--bg2); }
+    .overons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .overons-visual {
+      position: relative;
+    }
+    .overons-img-wrap {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+    }
+    .overons-img-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      color: var(--text-muted);
+    }
+    .since-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--orange);
+      padding: 20px 24px;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    }
+    .since-badge .year {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+    .since-badge .since-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+    .overons-text p {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .overons-features {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .overons-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15px;
+      color: var(--text);
+    }
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      background: var(--orange-glow);
+      border: 1px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── WERKWIJZE ── */
+    #werkwijze { background: var(--bg); }
+    .werkwijze-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .step-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 36px 28px;
+      position: relative;
+    }
+    .step-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 72px;
+      font-weight: 900;
+      color: rgba(249,115,22,0.12);
+      line-height: 1;
+      position: absolute;
+      top: 16px;
+      right: 20px;
+    }
+    .step-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--orange-glow);
+      border: 1px solid rgba(249,115,22,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .step-title {
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .step-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── PROJECTEN ── */
+    #projecten { background: var(--bg2); }
+    .projecten-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .project-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.25s;
+    }
+    .project-card:hover { border-color: var(--orange); }
+    .project-img {
+      aspect-ratio: 4/3;
+      background: var(--bg4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(17,17,17,0.9) 100%);
+    }
+    .project-cat {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--orange);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      color: #fff;
+    }
+    .project-body { padding: 24px; }
+    .project-title {
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .project-meta { font-size: 13px; color: var(--text-muted); }
+
+    /* project SVG illustrations */
+    .project-svg { opacity: 0.25; }
+
+    /* ── REFERENTIES ── */
+    #referenties { background: var(--bg); }
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .ref-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 32px;
+    }
+    .ref-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+    .ref-quote {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .ref-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .ref-avatar {
+      width: 42px;
+      height: 42px;
+      background: var(--orange-glow);
+      border: 1px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--orange);
+      clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+    }
+    .ref-name { font-size: 15px; font-weight: 600; color: var(--white); }
+    .ref-company { font-size: 12px; color: var(--text-muted); }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--bg2); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 32px; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .contact-icon-wrap {
+      width: 48px;
+      height: 48px;
+      background: var(--orange-glow);
+      border: 1px solid rgba(249,115,22,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    }
+    .contact-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 4px; }
+    .contact-val { font-size: 17px; color: var(--white); font-weight: 500; }
+    .map-placeholder {
+      margin-top: 24px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    }
+    .map-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* form */
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+      resize: vertical;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--orange); }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #555; }
+    .form-group select option { background: var(--bg2); }
+    .form-submit-wrap { display: flex; align-items: center; gap: 16px; }
+    .form-note { font-size: 12px; color: var(--text-muted); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 48px 0 32px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--orange); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: 13px; color: var(--text-muted); }
+    .footer-kvk { font-size: 13px; color: var(--text-muted); }
+
+    /* ── REVEAL ANIMATION ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+      .trust-inner { animation: none; }
+      .hero-badge-ring svg { animation: none; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { display: none; }
+      .overons-grid { grid-template-columns: 1fr; }
+      .overons-visual { display: none; }
+      .diensten-grid { grid-template-columns: repeat(2, 1fr); }
+      .werkwijze-steps { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --nav-h: 64px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .diensten-grid { grid-template-columns: 1fr; }
+      .projecten-grid { grid-template-columns: 1fr; }
+      .ref-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .werkwijze-steps { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .section-pad { padding: 72px 0; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-btns { flex-direction: column; }
+      .hero-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar" role="navigation" aria-label="Hoofdnavigatie">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Lasbedrijf BvD - naar homepagina">
+      <div class="logo-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M11 2L13.5 8H20L14.5 12L16.5 18.5L11 14.5L5.5 18.5L7.5 12L2 8H8.5L11 2Z" fill="white"/>
+          <circle cx="11" cy="11" r="3" fill="rgba(255,255,255,0.3)"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        Lasbedrijf BvD
+        <span>Enkhuizen · Sinds 2015</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#diensten">Diensten</a></li>
+      <li><a href="#overons">Over Ons</a></li>
+      <li><a href="#werkwijze">Werkwijze</a></li>
+      <li><a href="#projecten">Projecten</a></li>
+      <li><a href="#referenties">Referenties</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Offerte aanvragen</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobiel menu">
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#diensten" onclick="closeMobile()">Diensten</a>
+  <a href="#overons" onclick="closeMobile()">Over Ons</a>
+  <a href="#werkwijze" onclick="closeMobile()">Werkwijze</a>
+  <a href="#projecten" onclick="closeMobile()">Projecten</a>
+  <a href="#referenties" onclick="closeMobile()">Referenties</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="home" aria-label="Welkomstpagina">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-text">Lasbedrijf BvD · Enkhuizen</span>
+      </div>
+      <h1 class="hero-title">
+        Vakmanschap<br/>
+        <span class="line2">In Staal</span>
+      </h1>
+      <p class="hero-desc">
+        Wij zijn uw specialist voor lassen, staalconstructie en metaalbewerking in Noord-Holland.
+        Van eenmalige reparatie tot complexe maatwerkopdrachten — wij leveren kwaliteit die standhoudt.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Offerte aanvragen
+        </a>
+        <a href="#diensten" class="btn-ghost">
+          Onze diensten
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats" role="list">
+        <div class="stat-card" role="listitem">
+          <div class="stat-num" aria-label="Meer dan tien jaar ervaring">10+</div>
+          <div class="stat-label">Jaar ervaring</div>
+        </div>
+        <div class="stat-card" role="listitem">
+          <div class="stat-num" aria-label="Meer dan driehonderd projecten">300+</div>
+          <div class="stat-label">Projecten</div>
+        </div>
+        <div class="stat-card" role="listitem">
+          <div class="stat-num" aria-label="Meer dan honderd tachtig vaste klanten">180+</div>
+          <div class="stat-label">Vaste klanten</div>
+        </div>
+        <div class="stat-card" role="listitem">
+          <div class="stat-num" aria-label="Vijftig kilometer mobiele service">50km</div>
+          <div class="stat-label">Mobiel bereik</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-badge-ring">
+        <!-- Rotating ring text -->
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="circle-path" d="M160,160 m-130,0 a130,130 0 1,1 260,0 a130,130 0 1,1 -260,0"/>
+          </defs>
+          <circle cx="160" cy="160" r="130" stroke="rgba(249,115,22,0.15)" stroke-width="1" stroke-dasharray="4 8"/>
+          <circle cx="160" cy="160" r="145" stroke="rgba(249,115,22,0.06)" stroke-width="1"/>
+          <text font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" letter-spacing="6" fill="rgba(249,115,22,0.5)" text-transform="uppercase">
+            <textPath href="#circle-path">LASBEDRIJF BVD · ENKHUIZEN · MIG MAG TIG · STAALCONSTRUCTIE · </textPath>
+          </text>
+          <!-- Corner diamonds -->
+          <polygon points="160,12 165,22 160,32 155,22" fill="rgba(249,115,22,0.6)"/>
+          <polygon points="290,138 300,148 290,158 280,148" fill="rgba(249,115,22,0.4)"/>
+        </svg>
+
+        <!-- Center badge -->
+        <div class="hero-badge-center">
+          <div class="spark-icon">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+              <!-- Welding spark / flame icon -->
+              <path d="M26 6C26 6 18 16 18 26C18 31 21 35 26 37C26 37 24 32 27 28C28 30 30 33 30 36C30 36 35 32 35 26C35 20 30 14 30 14C30 14 31 18 28 20C27 17 26 6 26 6Z" fill="#F97316"/>
+              <path d="M26 37C21 35 18 31 18 26C18 22 19.5 18 21.5 15C20 18 19 22 21 25C22 23 24 21 26 22C25 24 25 26 26 27C27 26 27 24 28 23C30 22 31 24 30 26C29 28 26 30 26 37Z" fill="#FDB77A" opacity="0.7"/>
+              <circle cx="26" cy="38" r="3" fill="rgba(249,115,22,0.4)"/>
+            </svg>
+          </div>
+          <div class="hero-badge-label">BvD<br/>Lassen</div>
+          <div class="hero-badge-sub">Enkhuizen · NL</div>
+        </div>
+
+        <!-- Animated sparks -->
+        <div class="sparks">
+          <div class="spark" style="top:10%;left:50%;animation-delay:0s;"></div>
+          <div class="spark" style="top:50%;right:5%;animation-delay:0.4s;"></div>
+          <div class="spark" style="bottom:10%;left:20%;animation-delay:0.8s;"></div>
+          <div class="spark" style="bottom:30%;right:15%;animation-delay:1.2s;"></div>
+          <div class="spark" style="top:30%;left:8%;animation-delay:1.6s;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar" aria-hidden="true">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="trust-dot"></div> MIG/MAG Lassen</div>
+    <div class="trust-item"><div class="trust-dot"></div> TIG Lassen</div>
+    <div class="trust-item"><div class="trust-dot"></div> Staalconstructie</div>
+    <div class="trust-item"><div class="trust-dot"></div> Plaatwerk</div>
+    <div class="trust-item"><div class="trust-dot"></div> Mobiele Lasdienst</div>
+    <div class="trust-item"><div class="trust-dot"></div> Siersmeedwerk</div>
+    <div class="trust-item"><div class="trust-dot"></div> Reparaties & Onderhoud</div>
+    <div class="trust-item"><div class="trust-dot"></div> Enkhuizen · Noord-Holland</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="trust-item"><div class="trust-dot"></div> MIG/MAG Lassen</div>
+    <div class="trust-item"><div class="trust-dot"></div> TIG Lassen</div>
+    <div class="trust-item"><div class="trust-dot"></div> Staalconstructie</div>
+    <div class="trust-item"><div class="trust-dot"></div> Plaatwerk</div>
+    <div class="trust-item"><div class="trust-dot"></div> Mobiele Lasdienst</div>
+    <div class="trust-item"><div class="trust-dot"></div> Siersmeedwerk</div>
+    <div class="trust-item"><div class="trust-dot"></div> Reparaties & Onderhoud</div>
+    <div class="trust-item"><div class="trust-dot"></div> Enkhuizen · Noord-Holland</div>
+  </div>
+</div>
+
+<!-- ── DIENSTEN ── -->
+<section id="diensten" class="section-pad" aria-labelledby="diensten-title">
+  <div class="container">
+    <div class="diensten-header">
+      <div>
+        <span class="tag">Onze diensten</span>
+        <div class="divider"></div>
+        <h2 class="section-title" id="diensten-title">Wat wij<br/>voor u doen</h2>
+      </div>
+      <p class="section-sub">Van nauwkeurig TIG-lassen tot zware staalconstructies — wij beschikken over de kennis en apparatuur voor vrijwel elk lasproject.</p>
+    </div>
+
+    <div class="diensten-grid">
+      <!-- 1 -->
+      <article class="dienst-card reveal">
+        <div class="dienst-icon" aria-hidden="true">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+          </svg>
+        </div>
+        <div class="dienst-num">01</div>
+        <h3 class="dienst-title">MIG/MAG & TIG Lassen</h3>
+        <p class="dienst-desc">Precisielaswerk in staal, roestvrij staal en aluminium. Geschikt voor dunne plaat tot zware profielen. Wij werken volgens de geldende lasnormen voor optimale verbindingskwaliteit.</p>
+      </article>
+
+      <!-- 2 -->
+      <article class="dienst-card reveal">
+        <div class="dienst-icon" aria-hidden="true">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+        </div>
+        <div class="dienst-num">02</div>
+        <h3 class="dienst-title">Staalconstructie op maat</h3>
+        <p class="dienst-desc">Maatwerk staalconstructies voor industrie, agrarische sector en de bouw. Van overkappingen en loopbruggen tot machineframes en steunen — wij ontwerpen en realiseren volledig op maat.</p>
+      </article>
+
+      <!-- 3 -->
+      <article class="dienst-card reveal">
+        <div class="dienst-icon" aria-hidden="true">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+          </svg>
+        </div>
+        <div class="dienst-num">03</div>
+        <h3 class="dienst-title">Metaalbewerking & plaatwerk</h3>
+        <p class="dienst-desc">Zagen, buigen, frezen en bewerken van metaal en plaatstaal. Wij verzorgen complete plaatbewerkingsprojecten voor de industrie, scheepvaart en agrarische sector in de regio.</p>
+      </article>
+
+      <!-- 4 -->
+      <article class="dienst-card reveal">
+        <div class="dienst-icon" aria-hidden="true">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="dienst-num">04</div>
+        <h3 class="dienst-title">Reparaties & onderhoud</h3>
+        <p class="dienst-desc">Snelle en vakkundige reparaties aan machines, voertuigen, hekwerken, landbouwwerktuigen en meer. Wij zorgen voor minimale stilstand en maximale levensduur van uw materieel.</p>
+      </article>
+
+      <!-- 5 -->
+      <article class="dienst-card reveal">
+        <div class="dienst-icon" aria-hidden="true">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+          </svg>
+        </div>
+        <div class="dienst-num">05</div>
+        <h3 class="dienst-title">Mobiele lasdienst</h3>
+        <p class="dienst-desc">Kan uw object niet naar ons toe? Dan komen wij naar u toe. Met onze volledig uitgeruste lasbus rijden wij binnen 50 km voor spoedklussen, reparaties op locatie of projecten op het erf.</p>
+      </article>
+
+      <!-- 6 -->
+      <article class="dienst-card reveal">
+        <div class="dienst-icon" aria-hidden="true">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+          </svg>
+        </div>
+        <div class="dienst-num">06</div>
+        <h3 class="dienst-title">Siersmeedwerk</h3>
+        <p class="dienst-desc">Decoratieve smeedijzeren hekwerken, trapleuningen, poorten, meubilair en kunstobjecten. Wij combineren ambachtelijk vakmanschap met moderne ontwerptechnieken voor unieke resultaten.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── OVER ONS ── -->
+<section id="overons" class="section-pad" aria-labelledby="overons-title">
+  <div class="container">
+    <div class="overons-grid">
+      <div class="overons-visual reveal" aria-hidden="true">
+        <div class="overons-img-wrap">
+          <div class="overons-img-placeholder">
+            <svg width="80" height="80" fill="none" viewBox="0 0 80 80">
+              <rect x="10" y="40" width="60" height="30" rx="2" stroke="rgba(249,115,22,0.4)" stroke-width="2"/>
+              <rect x="20" y="20" width="40" height="25" rx="1" stroke="rgba(249,115,22,0.3)" stroke-width="1.5"/>
+              <path d="M35 55 L45 55" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+              <path d="M30 35 Q40 28 50 35" stroke="rgba(249,115,22,0.5)" stroke-width="1.5" fill="none"/>
+              <!-- Spark lines -->
+              <path d="M42 32 L48 25 L44 26 L46 20" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="48" cy="25" r="2" fill="#F97316" opacity="0.6"/>
+              <circle cx="50" cy="23" r="1" fill="#F97316" opacity="0.4"/>
+            </svg>
+            <span style="font-size:13px;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;">Foto van de werkplaats</span>
+          </div>
+        </div>
+        <div class="since-badge">
+          <div class="year">2015</div>
+          <div class="since-label">Opgericht</div>
+        </div>
+      </div>
+
+      <div class="overons-text reveal">
+        <span class="tag">Over ons</span>
+        <div class="divider"></div>
+        <h2 class="section-title" id="overons-title">Familie&shy;bedrijf<br/>met lef</h2>
+        <p>Lasbedrijf BvD is in 2015 opgericht met één doel: eerlijk vakwerk leveren zonder poespas. Wat begon als een eenmanszaak vanuit de garage in Enkhuizen, groeide uit tot een volwaardig lasbedrijf met een vaste klantenkring in Noord-Holland.</p>
+        <p>Wij werken voor grote en kleine bedrijven, loonwerkers, scheepswerven, boerenbedrijven én particulieren die iets goed gedaan willen hebben. Geen callcenters, geen tussenpersonen — gewoon direct contact met de vakman.</p>
+        <p>Trots op ons werk. Eerlijk over wat wel en niet kan. En altijd bereikbaar als het misgaat.</p>
+        <div class="overons-features" role="list">
+          <div class="overons-feature" role="listitem">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            Meer dan 10 jaar specialistische ervaring
+          </div>
+          <div class="overons-feature" role="listitem">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            Gecertificeerd laswerk conform EN ISO 3834
+          </div>
+          <div class="overons-feature" role="listitem">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            Korte lijnen — snel schakelen, geen bureaucratie
+          </div>
+          <div class="overons-feature" role="listitem">
+            <div class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            Vaste prijs of uurtarief — transparant en eerlijk
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WERKWIJZE ── -->
+<section id="werkwijze" class="section-pad" aria-labelledby="werkwijze-title">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0;">
+      <span class="tag">Hoe wij werken</span>
+      <div class="divider" style="margin:0 auto 24px;"></div>
+      <h2 class="section-title" id="werkwijze-title">Van aanvraag tot oplevering</h2>
+      <p class="section-sub" style="margin:0 auto;">Geen verrassingen, geen gedoe. Wij houden u bij elke stap op de hoogte.</p>
+    </div>
+
+    <div class="werkwijze-steps">
+      <div class="step-card reveal">
+        <div class="step-num" aria-hidden="true">01</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Contact opnemen</h3>
+        <p class="step-desc">Vul het contactformulier in, stuur een mail of bel ons direct. Wij reageren binnen één werkdag op iedere aanvraag.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-num" aria-hidden="true">02</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Intake & offerte</h3>
+        <p class="step-desc">Wij komen bij u langs of u stuurt ons tekeningen en foto's. Op basis daarvan maken wij een scherpe en transparante offerte.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-num" aria-hidden="true">03</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Uitvoering</h3>
+        <p class="step-desc">Na akkoord op de offerte plannen wij de uitvoering in. Wij werken netjes, efficiënt en houden u op de hoogte van de voortgang.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-num" aria-hidden="true">04</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Oplevering & nazorg</h3>
+        <p class="step-desc">Wij leveren op met een kwaliteitscheck. U krijgt garantie op ons laswerk en wij staan klaar voor eventuele vragen of nazorg nadien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTEN ── -->
+<section id="projecten" class="section-pad" aria-labelledby="projecten-title">
+  <div class="container">
+    <div class="diensten-header">
+      <div>
+        <span class="tag">Ons werk</span>
+        <div class="divider"></div>
+        <h2 class="section-title" id="projecten-title">Recente<br/>projecten</h2>
+      </div>
+      <p class="section-sub">Een greep uit de projecten die wij de afgelopen jaren hebben gerealiseerd voor onze klanten in Noord-Holland.</p>
+    </div>
+
+    <div class="projecten-grid">
+      <article class="project-card reveal">
+        <div class="project-img" aria-label="Staalconstructie melkveebedrijf foto placeholder">
+          <svg class="project-svg" width="160" height="120" viewBox="0 0 160 120" fill="none">
+            <rect x="20" y="60" width="120" height="50" stroke="white" stroke-width="1.5"/>
+            <polygon points="20,60 80,20 140,60" stroke="white" stroke-width="1.5" fill="none"/>
+            <line x1="20" y1="60" x2="140" y2="60" stroke="white" stroke-width="1"/>
+            <line x1="80" y1="20" x2="80" y2="110" stroke="white" stroke-width="1" stroke-dasharray="4 4"/>
+          </svg>
+          <div class="project-overlay"></div>
+          <div class="project-cat">Staalconstructie</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Overkapping melkveebedrijf</h3>
+          <p class="project-meta">Staalconstructie · 24 x 12 m · Wieringermeer</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-img" aria-label="Siersmeedwerk poort foto placeholder">
+          <svg class="project-svg" width="160" height="120" viewBox="0 0 160 120" fill="none">
+            <rect x="30" y="15" width="14" height="95" rx="2" stroke="white" stroke-width="1.5"/>
+            <rect x="116" y="15" width="14" height="95" rx="2" stroke="white" stroke-width="1.5"/>
+            <rect x="44" y="30" width="72" height="8" rx="1" stroke="white" stroke-width="1.5"/>
+            <rect x="44" y="82" width="72" height="8" rx="1" stroke="white" stroke-width="1.5"/>
+            <line x1="60" y1="38" x2="60" y2="82" stroke="white" stroke-width="1.2"/>
+            <line x1="80" y1="38" x2="80" y2="82" stroke="white" stroke-width="1.2"/>
+            <line x1="100" y1="38" x2="100" y2="82" stroke="white" stroke-width="1.2"/>
+            <path d="M60 55 Q70 48 80 55 Q90 48 100 55" stroke="#F97316" stroke-width="1" fill="none"/>
+          </svg>
+          <div class="project-overlay"></div>
+          <div class="project-cat">Siersmeedwerk</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Smeedijzeren toegangspoort</h3>
+          <p class="project-meta">Siersmeedwerk · Maatwerkontwerp · Enkhuizen</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-img" aria-label="Machineframe reparatie foto placeholder">
+          <svg class="project-svg" width="160" height="120" viewBox="0 0 160 120" fill="none">
+            <rect x="25" y="30" width="110" height="70" rx="3" stroke="white" stroke-width="1.5"/>
+            <rect x="40" y="45" width="30" height="30" rx="2" stroke="white" stroke-width="1.2"/>
+            <circle cx="100" cy="60" r="18" stroke="white" stroke-width="1.5"/>
+            <circle cx="100" cy="60" r="8" stroke="white" stroke-width="1"/>
+            <line x1="100" y1="42" x2="100" y2="48" stroke="white" stroke-width="1.5"/>
+            <line x1="100" y1="72" x2="100" y2="78" stroke="white" stroke-width="1.5"/>
+          </svg>
+          <div class="project-overlay"></div>
+          <div class="project-cat">Reparatie</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Machineframe reparatie perslijn</h3>
+          <p class="project-meta">Industriële reparatie · Spoedklus · Hoorn</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-img" aria-label="RVS trapleuning foto placeholder">
+          <svg class="project-svg" width="160" height="120" viewBox="0 0 160 120" fill="none">
+            <line x1="20" y1="90" x2="140" y2="30" stroke="white" stroke-width="2"/>
+            <line x1="20" y1="100" x2="140" y2="40" stroke="white" stroke-width="1" opacity="0.5"/>
+            <line x1="40" y1="100" x2="40" y2="82" stroke="white" stroke-width="1.5"/>
+            <line x1="65" y1="100" x2="65" y2="69" stroke="white" stroke-width="1.5"/>
+            <line x1="90" y1="100" x2="90" y2="56" stroke="white" stroke-width="1.5"/>
+            <line x1="115" y1="100" x2="115" y2="43" stroke="white" stroke-width="1.5"/>
+            <rect x="20" y="98" width="120" height="8" rx="1" stroke="white" stroke-width="1"/>
+          </svg>
+          <div class="project-overlay"></div>
+          <div class="project-cat">Metaalbewerking</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">RVS trapleuning bedrijfspand</h3>
+          <p class="project-meta">Roestvrij staal · TIG lassen · Medemblik</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-img" aria-label="Stalen loopbrug foto placeholder">
+          <svg class="project-svg" width="160" height="120" viewBox="0 0 160 120" fill="none">
+            <rect x="15" y="55" width="130" height="12" rx="1" stroke="white" stroke-width="1.5"/>
+            <line x1="30" y1="55" x2="30" y2="25" stroke="white" stroke-width="1.5"/>
+            <line x1="130" y1="55" x2="130" y2="25" stroke="white" stroke-width="1.5"/>
+            <line x1="30" y1="25" x2="130" y2="25" stroke="white" stroke-width="1.5"/>
+            <line x1="55" y1="67" x2="55" y2="90" stroke="white" stroke-width="1"/>
+            <line x1="80" y1="67" x2="80" y2="95" stroke="white" stroke-width="1"/>
+            <line x1="105" y1="67" x2="105" y2="90" stroke="white" stroke-width="1"/>
+            <line x1="30" y1="40" x2="130" y2="40" stroke="white" stroke-width="1" stroke-dasharray="6 4"/>
+          </svg>
+          <div class="project-overlay"></div>
+          <div class="project-cat">Staalconstructie</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Stalen loopbrug haven Enkhuizen</h3>
+          <p class="project-meta">Constructielassen · 18m overspanning · Enkhuizen</p>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-img" aria-label="Kipwagen frame foto placeholder">
+          <svg class="project-svg" width="160" height="120" viewBox="0 0 160 120" fill="none">
+            <path d="M20 80 L20 40 L100 40 L130 55 L130 80 Z" stroke="white" stroke-width="1.5" fill="none"/>
+            <circle cx="45" cy="90" r="12" stroke="white" stroke-width="1.5"/>
+            <circle cx="105" cy="90" r="12" stroke="white" stroke-width="1.5"/>
+            <circle cx="45" cy="90" r="5" stroke="white" stroke-width="1"/>
+            <circle cx="105" cy="90" r="5" stroke="white" stroke-width="1"/>
+            <line x1="20" y1="55" x2="100" y2="55" stroke="white" stroke-width="1" stroke-dasharray="4 4"/>
+          </svg>
+          <div class="project-overlay"></div>
+          <div class="project-cat">Reparatie</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Nieuw frame kipwagen loonwerk</h3>
+          <p class="project-meta">Voertuigreparatie · Maatwerk frame · Andijk</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── REFERENTIES ── -->
+<section id="referenties" class="section-pad" aria-labelledby="referenties-title">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0;">
+      <span class="tag">Referenties</span>
+      <div class="divider" style="margin:0 auto 24px;"></div>
+      <h2 class="section-title" id="referenties-title">Wat klanten zeggen</h2>
+      <p class="section-sub" style="margin:0 auto;">Wij laten ons werk voor zich spreken — maar klanten mogen dat ook.</p>
+    </div>
+
+    <div class="ref-grid">
+      <article class="ref-card reveal">
+        <div class="ref-stars" role="img" aria-label="5 sterren">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="ref-quote">"Wij hebben al meerdere staalconstructies door BvD laten maken. Altijd op tijd, netjes en eerlijk geprijsd. Ze denken goed mee en komen gewoon doen wat ze beloven. Dat is tegenwoordig niet vanzelfsprekend."</p>
+        <div class="ref-author">
+          <div class="ref-avatar" aria-hidden="true">RD</div>
+          <div>
+            <div class="ref-name">R. de Boer</div>
+            <div class="ref-company">De Boer Loonwerken, Wieringermeer</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card reveal">
+        <div class="ref-stars" role="img" aria-label="5 sterren">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="ref-quote">"Onze pers stond stil. BvD was binnen twee uur ter plaatse met de lasbus en had het probleem dezelfde dag opgelost. Dat scheelde ons een dag productieverlies. Absoluut aanrader voor bedrijven die snel geholpen willen worden."</p>
+        <div class="ref-author">
+          <div class="ref-avatar" aria-hidden="true">MV</div>
+          <div>
+            <div class="ref-name">M. Verhoeven</div>
+            <div class="ref-company">Verhoeven Techniek BV, Hoorn</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ref-card reveal">
+        <div class="ref-stars" role="img" aria-label="5 sterren">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="ref-quote">"De smeedijzeren poort die BvD voor ons heeft gemaakt, is echt iets om trots op te zijn. Ze hebben precies gedaan wat we voor ogen hadden — inclusief een paar suggesties waardoor het er nóg mooier uitziet."</p>
+        <div class="ref-author">
+          <div class="ref-avatar" aria-hidden="true">JP</div>
+          <div>
+            <div class="ref-name">J. Pieters</div>
+            <div class="ref-company">Particulier, Enkhuizen</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact" class="section-pad" aria-labelledby="contact-title">
+  <div class="container">
+    <div style="margin-bottom:56px;">
+      <span class="tag">Contact</span>
+      <div class="divider"></div>
+      <h2 class="section-title" id="contact-title">Offerte aanvragen<br/>of gewoon bellen</h2>
+      <p class="section-sub">Vertel ons wat u nodig heeft. Wij reageren binnen één werkdag met een eerlijk antwoord en een scherpe prijs.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="reveal">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Adres</div>
+              <div class="contact-val">Enkhuizen, Noord-Holland</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">E-mail</div>
+              <div class="contact-val"><a href="mailto:info@lasbedrijfbvd.nl" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#F97316'" onmouseout="this.style.color='inherit'">info@lasbedrijfbvd.nl</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Openingstijden</div>
+              <div class="contact-val">Ma–Vr 07:30–17:00</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#F97316" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Mobiele dienst</div>
+              <div class="contact-val">Binnen 50 km — ook voor spoedklussen</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder" aria-label="Kaart van Enkhuizen - locatie Lasbedrijf BvD">
+          <div class="map-inner">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="rgba(249,115,22,0.6)" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>Enkhuizen, Noord-Holland</span>
+            <span style="font-size:11px;color:#555;">Google Maps embed hier invoegen</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="contact-form reveal" id="contactForm" aria-label="Contactformulier offerte aanvragen" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="naam">Naam *</label>
+            <input type="text" id="naam" name="naam" placeholder="Jan de Vries" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="bedrijf">Bedrijf</label>
+            <input type="text" id="bedrijf" name="bedrijf" placeholder="BV / Eenmanszaak" autocomplete="organization" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="jan@bedrijf.nl" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="telefoon">Telefoon</label>
+            <input type="tel" id="telefoon" name="telefoon" placeholder="06 – 12 34 56 78" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dienst">Gewenste dienst</label>
+          <select id="dienst" name="dienst">
+            <option value="">Selecteer een dienst…</option>
+            <option>MIG/MAG & TIG Lassen</option>
+            <option>Staalconstructie op maat</option>
+            <option>Metaalbewerking & plaatwerk</option>
+            <option>Reparaties & onderhoud</option>
+            <option>Mobiele lasdienst</option>
+            <option>Siersmeedwerk</option>
+            <option>Anders / combinatie</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="bericht">Omschrijving *</label>
+          <textarea id="bericht" name="bericht" rows="5" placeholder="Beschrijf uw project of klus zo volledig mogelijk. Afmetingen, materiaal, locatie — hoe meer info, hoe sneller wij u een passend aanbod kunnen doen." required></textarea>
+        </div>
+        <div class="form-submit-wrap">
+          <button type="submit" class="btn-primary" id="submitBtn">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            Verstuur aanvraag
+          </button>
+          <span class="form-note">* Verplichte velden</span>
+        </div>
+        <div id="formSuccess" role="alert" aria-live="polite" style="display:none;padding:16px;background:rgba(249,115,22,0.1);border:1px solid var(--orange);color:var(--white);font-size:14px;margin-top:8px;">
+          Bedankt! Uw aanvraag is ontvangen. Wij reageren binnen één werkdag.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo" aria-label="Lasbedrijf BvD - terug naar boven">
+          <div class="logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M11 2L13.5 8H20L14.5 12L16.5 18.5L11 14.5L5.5 18.5L7.5 12L2 8H8.5L11 2Z" fill="white"/>
+              <circle cx="11" cy="11" r="3" fill="rgba(255,255,255,0.3)"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            Lasbedrijf BvD
+            <span>Enkhuizen · Sinds 2015</span>
+          </div>
+        </a>
+        <p>Uw specialist voor lassen, staalconstructie en metaalbewerking in Noord-Holland. Vakwerk met een eerlijke prijs, altijd bereikbaar als het telt.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="#diensten">MIG/MAG & TIG Lassen</a></li>
+          <li><a href="#diensten">Staalconstructie</a></li>
+          <li><a href="#diensten">Metaalbewerking</a></li>
+          <li><a href="#diensten">Reparaties</a></li>
+          <li><a href="#diensten">Mobiele lasdienst</a></li>
+          <li><a href="#diensten">Siersmeedwerk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bedrijf</h4>
+        <ul>
+          <li><a href="#overons">Over ons</a></li>
+          <li><a href="#werkwijze">Werkwijze</a></li>
+          <li><a href="#projecten">Projecten</a></li>
+          <li><a href="#referenties">Referenties</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@lasbedrijfbvd.nl">info@lasbedrijfbvd.nl</a></li>
+          <li><a href="#contact">Offerte aanvragen</a></li>
+          <li style="color:var(--text-muted);font-size:14px;">Ma–Vr 07:30–17:00</li>
+          <li style="color:var(--text-muted);font-size:14px;">Enkhuizen, NH</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Lasbedrijf BvD — Alle rechten voorbehouden</p>
+      <p class="footer-kvk">KvK: xxxxxxxxxx &nbsp;·&nbsp; BTW: NLxxxxxxxxxx</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Mobile menu toggle ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  // ── Scroll reveal ──
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger siblings in same parent
+        const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal'));
+        const idx = siblings.indexOf(entry.target);
+        entry.target.style.transitionDelay = (idx * 80) + 'ms';
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => observer.observe(el));
+
+  // ── Active nav link on scroll ──
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => {
+          a.style.color = a.getAttribute('href') === '#' + entry.target.id ? 'var(--orange)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  document.querySelectorAll('section[id]').forEach(s => navObserver.observe(s));
+
+  // ── Form submit (demo) ──
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Verzenden…';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    setTimeout(() => {
+      document.getElementById('formSuccess').style.display = 'block';
+      document.getElementById('contactForm').reset();
+      btn.innerHTML = '<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg> Verstuur aanvraag';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    }, 1200);
+  }
+
+  // ── Counter animation ──
+  const counters = document.querySelectorAll('.stat-num');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterObserver.observe(c));
+</script>
+</body>
+</html>
