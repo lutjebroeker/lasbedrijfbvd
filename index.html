@@ -368,6 +368,13 @@
     position: relative;
     transition: background 0.4s;
   }
+  .proj-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s, filter 0.4s;
+    filter: grayscale(15%);
+  }
+  .proj-card:hover .proj-img img { transform: scale(1.06); filter: grayscale(0%); }
   .proj-card:hover .proj-img { background: var(--ink); }
   .proj-card:hover .proj-svg { opacity: 0.15; }
   .proj-card:hover .proj-cat { background: var(--orange); }
@@ -756,12 +763,8 @@
     <div class="proj-grid r" style="transition-delay:0.1s">
 
       <article class="proj-card">
-        <div class="proj-img" aria-label="Overkapping melkveebedrijf — staalconstructie">
-          <svg class="proj-svg" width="140" height="105" viewBox="0 0 140 105" fill="none">
-            <rect x="10" y="52" width="120" height="46" stroke="#0b0b0b" stroke-width="1.2"/>
-            <polygon points="10,52 70,14 130,52" stroke="#0b0b0b" stroke-width="1.2" fill="none"/>
-            <line x1="70" y1="14" x2="70" y2="98" stroke="#0b0b0b" stroke-width="0.8" stroke-dasharray="4 4"/>
-          </svg>
+        <div class="proj-img">
+          <img src="images/photo_002.jpg" alt="Laswerk project BvD" loading="lazy" />
           <span class="proj-cat">Staalconstructie</span>
         </div>
         <div class="proj-body">
@@ -771,17 +774,8 @@
       </article>
 
       <article class="proj-card">
-        <div class="proj-img" aria-label="Smeedijzeren toegangspoort">
-          <svg class="proj-svg" width="140" height="105" viewBox="0 0 140 105" fill="none">
-            <rect x="18" y="10" width="12" height="88" rx="1" stroke="#0b0b0b" stroke-width="1.2"/>
-            <rect x="110" y="10" width="12" height="88" rx="1" stroke="#0b0b0b" stroke-width="1.2"/>
-            <rect x="30" y="22" width="80" height="7" rx="0.5" stroke="#0b0b0b" stroke-width="1.2"/>
-            <rect x="30" y="76" width="80" height="7" rx="0.5" stroke="#0b0b0b" stroke-width="1.2"/>
-            <line x1="52" y1="29" x2="52" y2="76" stroke="#0b0b0b" stroke-width="1"/>
-            <line x1="70" y1="29" x2="70" y2="76" stroke="#0b0b0b" stroke-width="1"/>
-            <line x1="88" y1="29" x2="88" y2="76" stroke="#0b0b0b" stroke-width="1"/>
-            <path d="M52 50 Q61 44 70 50 Q79 44 88 50" stroke="#e85c2c" stroke-width="0.8" fill="none"/>
-          </svg>
+        <div class="proj-img">
+          <img src="images/photo_003.jpg" alt="Laswerk project BvD" loading="lazy" />
           <span class="proj-cat">Siersmeedwerk</span>
         </div>
         <div class="proj-body">
@@ -791,16 +785,8 @@
       </article>
 
       <article class="proj-card">
-        <div class="proj-img" aria-label="RVS trapleuning bedrijfspand">
-          <svg class="proj-svg" width="140" height="105" viewBox="0 0 140 105" fill="none">
-            <line x1="14" y1="82" x2="126" y2="24" stroke="#0b0b0b" stroke-width="1.5"/>
-            <line x1="14" y1="92" x2="126" y2="34" stroke="#0b0b0b" stroke-width="0.6" opacity="0.4"/>
-            <line x1="35" y1="92" x2="35" y2="74" stroke="#0b0b0b" stroke-width="1.2"/>
-            <line x1="60" y1="92" x2="60" y2="63" stroke="#0b0b0b" stroke-width="1.2"/>
-            <line x1="85" y1="92" x2="85" y2="52" stroke="#0b0b0b" stroke-width="1.2"/>
-            <line x1="110" y1="92" x2="110" y2="41" stroke="#0b0b0b" stroke-width="1.2"/>
-            <rect x="14" y="90" width="112" height="6" rx="0.5" stroke="#0b0b0b" stroke-width="0.8"/>
-          </svg>
+        <div class="proj-img">
+          <img src="images/photo_004.jpg" alt="Laswerk project BvD" loading="lazy" />
           <span class="proj-cat">Metaalbewerking</span>
         </div>
         <div class="proj-body">
@@ -810,15 +796,8 @@
       </article>
 
       <article class="proj-card">
-        <div class="proj-img" aria-label="Machineframe reparatie perslijn">
-          <svg class="proj-svg" width="140" height="105" viewBox="0 0 140 105" fill="none">
-            <rect x="20" y="24" width="100" height="64" rx="2" stroke="#0b0b0b" stroke-width="1.2"/>
-            <rect x="34" y="38" width="26" height="26" rx="1" stroke="#0b0b0b" stroke-width="1"/>
-            <circle cx="94" cy="51" r="16" stroke="#0b0b0b" stroke-width="1.2"/>
-            <circle cx="94" cy="51" r="7" stroke="#0b0b0b" stroke-width="0.8"/>
-            <line x1="94" y1="35" x2="94" y2="40" stroke="#0b0b0b" stroke-width="1.5"/>
-            <line x1="94" y1="62" x2="94" y2="67" stroke="#0b0b0b" stroke-width="1.5"/>
-          </svg>
+        <div class="proj-img">
+          <img src="images/photo_005.jpg" alt="Laswerk project BvD" loading="lazy" />
           <span class="proj-cat">Reparatie</span>
         </div>
         <div class="proj-body">
@@ -828,17 +807,8 @@
       </article>
 
       <article class="proj-card">
-        <div class="proj-img" aria-label="Stalen loopbrug haven Enkhuizen">
-          <svg class="proj-svg" width="140" height="105" viewBox="0 0 140 105" fill="none">
-            <rect x="10" y="46" width="120" height="10" rx="0.5" stroke="#0b0b0b" stroke-width="1.2"/>
-            <line x1="24" y1="46" x2="24" y2="20" stroke="#0b0b0b" stroke-width="1.2"/>
-            <line x1="116" y1="46" x2="116" y2="20" stroke="#0b0b0b" stroke-width="1.2"/>
-            <line x1="24" y1="20" x2="116" y2="20" stroke="#0b0b0b" stroke-width="1.2"/>
-            <line x1="50" y1="56" x2="50" y2="78" stroke="#0b0b0b" stroke-width="0.8"/>
-            <line x1="70" y1="56" x2="70" y2="82" stroke="#0b0b0b" stroke-width="0.8"/>
-            <line x1="90" y1="56" x2="90" y2="78" stroke="#0b0b0b" stroke-width="0.8"/>
-            <line x1="24" y1="33" x2="116" y2="33" stroke="#0b0b0b" stroke-width="0.6" stroke-dasharray="5 4"/>
-          </svg>
+        <div class="proj-img">
+          <img src="images/photo_006.jpg" alt="Laswerk project BvD" loading="lazy" />
           <span class="proj-cat">Staalconstructie</span>
         </div>
         <div class="proj-body">
@@ -848,15 +818,8 @@
       </article>
 
       <article class="proj-card">
-        <div class="proj-img" aria-label="Nieuw frame kipwagen loonwerk">
-          <svg class="proj-svg" width="140" height="105" viewBox="0 0 140 105" fill="none">
-            <path d="M16 72 L16 36 L90 36 L118 50 L118 72 Z" stroke="#0b0b0b" stroke-width="1.2" fill="none"/>
-            <circle cx="38" cy="82" r="10" stroke="#0b0b0b" stroke-width="1.2"/>
-            <circle cx="96" cy="82" r="10" stroke="#0b0b0b" stroke-width="1.2"/>
-            <circle cx="38" cy="82" r="4" stroke="#0b0b0b" stroke-width="0.8"/>
-            <circle cx="96" cy="82" r="4" stroke="#0b0b0b" stroke-width="0.8"/>
-            <line x1="16" y1="50" x2="90" y2="50" stroke="#0b0b0b" stroke-width="0.6" stroke-dasharray="4 4"/>
-          </svg>
+        <div class="proj-img">
+          <img src="images/photo_007.jpg" alt="Laswerk project BvD" loading="lazy" />
           <span class="proj-cat">Reparatie</span>
         </div>
         <div class="proj-body">
